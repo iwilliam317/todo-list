@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Form from './form'
+import List from './list'
 
 class Todo extends Component {
     render(){
@@ -7,6 +8,7 @@ class Todo extends Component {
             <>
                 <h1>Todo</h1>
                 <Form />
+                <List />
             </>
         )
     }

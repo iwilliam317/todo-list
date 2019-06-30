@@ -1,2 +1,7 @@
-//import {} from 'redux'
-//const reducers = 
+import {combineReducers} from 'redux'
+
+const reducers = combineReducers({
+    todo: () => ({ list: 'chablau'})
+})
+
+export default reducers
