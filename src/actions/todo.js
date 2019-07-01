@@ -2,4 +2,9 @@ const save = () => {
     console.log('saving todo...')
 }
 
-export {save}
+const handleChange = event => ({
+    type: 'HANDLE_CHANGE',
+    payload: event.target.value
+})
+
+export {save, handleChange}
