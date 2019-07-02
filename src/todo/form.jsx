@@ -4,13 +4,14 @@ import {connect} from 'react-redux'
 import {save, handleChange} from '../actions/todo'
 
 const Form = props => {
-    const {save, handleChange} = props
+    const {save, handleChange, todo} = props
     return (
         <div>
             <input type='text' placeholder='todo' onChange={handleChange} />
-            <button type='button' onClick={save}>Create</button>
+            <button type='button' onClick={()=>save(todo.description)}>Create</button>
         </div>
     )
 }
+const mapStateToProps = state => ({todo: state.todo})
 const mapDispatchToProps = dispatch => bindActionCreators({save, handleChange}, dispatch)
-export default connect(null, mapDispatchToProps)(Form)
+export default connect(mapStateToProps, mapDispatchToProps)(Form)
