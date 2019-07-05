@@ -8,4 +8,9 @@ const handleChange = event => ({
     payload: event.target.value
 })
 
-export {save, handleChange}
+const remove = todo => ({
+    type: 'REMOVE_TODO',
+    payload: todo
+})
+
+export {save, handleChange, remove}
