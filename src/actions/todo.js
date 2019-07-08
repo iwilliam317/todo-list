@@ -13,4 +13,9 @@ const remove = todo => ({
     payload: todo
 })
 
-export {save, handleChange, remove}
+const markAsDone = todo => ({
+    type: 'TODO_DONE',
+    payload: todo
+})
+
+export {save, handleChange, remove, markAsDone}
