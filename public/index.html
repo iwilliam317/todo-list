@@ -4,13 +4,22 @@
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <style>
+      body {
+        background: #00d2ff;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
       .flex-container {
         display: flex;
         flex-direction: column-reverse
       }
       .flex-container div {
         border: 2px solid;
-        margin: 3px
+        margin: 3px;
+        display: flex;
+        justify-content: center;
+        font-size: 3em
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
