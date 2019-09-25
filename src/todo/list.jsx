@@ -7,9 +7,17 @@ const List = props => {
     const {list} = props.todo
     const {remove, markAsDone} = props
     return (
-        <div>
+        <div className='list'>
             <ul>
-                {list.map((l, index) => <li key={index}>{l.id} {l.description} {l.done}<button onClick={()=> markAsDone(l)}>^</button> <button onClick={()=>remove(l)}>x</button></li>)}
+                {list.map((l, index) => 
+                <li key={index}>{l.id} {l.description} {l.done}
+                    <button onClick={()=> markAsDone(l)}>
+                        <i className='glyphicon glyphicon-ok' aria-hidden='true'></i>
+                    </button>
+                    <button onClick={()=>remove(l)}>
+                        <i className='glyphicon glyphicon-trash' aria-hidden='true'></i>
+                    </button>
+                </li>)}
             </ul>
         </div>
     )
