@@ -15,7 +15,9 @@ body {
     background: #00d2ff;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 div {
@@ -29,12 +31,12 @@ div {
 input {
     appearance: none;
     background-color: none;
-    border: 1px solid #3a7bd5;
+    border: 0.1em solid #3a7bd5;
     line-height: 0;
     font-size: 1em;
     box-sizing: border-box;
     padding: 0.2em 0.3em;
-    border-radius: 0.6em;
+    border-radius: 0.3em;
     color: #3a7bd5;
     font-weight: 100;
     letter-spacing: 0.1em;
@@ -56,6 +58,10 @@ button {
 	transition: 0.2s ease-in-out;
     letter-spacing: 2px;
     margin: 0.3em;
+}
+
+.done {
+    text-decoration: line-through;
 }
 
 /* .rights {

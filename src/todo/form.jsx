@@ -7,7 +7,7 @@ const Form = props => {
     const {save, handleChange, todo} = props
     return (
         <div>
-            <input type='text' placeholder='todo' onChange={handleChange} />
+            <input type='text' onChange={handleChange} value={todo.description} />
             <button type='button' onClick={()=>save(todo.description)}>Create</button>
         </div>
     )

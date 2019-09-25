@@ -10,7 +10,8 @@ const List = props => {
         <div className='list'>
             <ul>
                 {list.map((l, index) => 
-                <li key={index}>{l.id} {l.description} {l.done}
+                <li key={index}>
+                    <span className={l.done ? 'done': ''}>{l.description} {l.done}</span>
                     <button onClick={()=> markAsDone(l)}>
                         <i className='glyphicon glyphicon-ok' aria-hidden='true'></i>
                     </button>

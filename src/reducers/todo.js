@@ -11,7 +11,7 @@ const TodoReducer = (state = INITIAL_STATE, action) => {
             const todo = {id, description: action.payload, done: false}
             list = state.list
             list.push(todo)
-            return {...state}
+            return {...state, description: ''}
         case 'REMOVE_TODO':
             todoId = action.payload.id || 0
             const index = state.list.find((t, index) => {
@@ -21,18 +21,13 @@ const TodoReducer = (state = INITIAL_STATE, action) => {
             list.pop(index)
             return {...state, list}
         case 'TODO_DONE':
-            console.log('sdsasdf')
             todoId = action.payload.id || 0
             list = state.list
-            const todoToBeEdited = list.find((todo, index) => {
-                if(todo === todoId){
-                    list.pop(index)
-                    return todo
+            list.find((todo, index) => {
+                if(todo.id === todoId){
+                    todo.done = !todo.done
                 } 
             })
-            todoToBeEdited = {...todo, done: true}
-            list.push(todoToBeEdited)
-            console.log(list)
             return {...state, list}
         default:
             return state
