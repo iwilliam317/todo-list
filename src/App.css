@@ -19,7 +19,7 @@ body {
 
 .title {
     margin-top: 1em;
-    font-size: 8em;
+    font-size: 9em;
 }
 
 .centerDiv {
@@ -83,17 +83,17 @@ li > button {
     text-decoration: line-through;
 }
 
-/* .rights {
+.rights {
     color: var(--main-color);
     position: fixed;
     left: 0;
     width: 100%;
     bottom: 0;
     text-align: center;
-} */
+}
 
-/* a {
+a {
     color: var(--main-color);
     text-decoration: none;
     font-weight: bolder;
-} */
+} 
