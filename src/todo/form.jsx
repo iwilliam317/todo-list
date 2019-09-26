@@ -6,7 +6,7 @@ import {save, handleChange} from '../actions/todo'
 const Form = props => {
     const {save, handleChange, todo} = props
     return (
-        <div>
+        <div className='centerDiv space'>
             <input type='text' onChange={handleChange} value={todo.description} />
             <button type='button' onClick={()=>save(todo.description)}>Create</button>
         </div>

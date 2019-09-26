@@ -6,7 +6,9 @@ class Todo extends Component {
     render(){
         return (
             <>
-                <h1>Todo</h1>
+                <div className='centerDiv'>
+                    <h1 className='title'>todo list</h1>
+                </div>
                 <Form />
                 <List />
             </>

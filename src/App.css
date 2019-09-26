@@ -15,25 +15,36 @@ body {
     background: #00d2ff;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title {
+    margin-top: 1em;
+    font-size: 8em;
+}
+
+.centerDiv {
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
 }
 
-div {
-    margin-top: 1em;
+.list {
+    text-align: center;
+    margin-top: 4em;
+    color: #fff;
+    font-size: 1.2em;
 }
 
-.list {
-    color: #fff;
+ul {
+    list-style: inside;
 }
 
 input {
     appearance: none;
     background-color: none;
-    border: 0.1em solid #3a7bd5;
+    border: 0.015em solid #00d2ff;
     line-height: 0;
-    font-size: 1em;
+    font-size: 1.3em;
     box-sizing: border-box;
     padding: 0.2em 0.3em;
     border-radius: 0.3em;
@@ -42,7 +53,11 @@ input {
     letter-spacing: 0.1em;
     position: relative;
     z-index: 1;
+    margin-right: 0.5em;
+}
 
+.space {
+    margin-top: 3em;
 }
 
 button {
@@ -58,6 +73,10 @@ button {
 	transition: 0.2s ease-in-out;
     letter-spacing: 2px;
     margin: 0.3em;
+}
+
+li > button {
+    border: 0.03em solid #fff;
 }
 
 .done {
