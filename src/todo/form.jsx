@@ -8,7 +8,9 @@ const Form = props => {
     return (
         <div className='centerDiv space'>
             <input type='text' onChange={handleChange} value={todo.description} />
-            <button type='button' onClick={()=>save(todo.description)}>Create</button>
+            <button type='button' onClick={()=>save(todo.description)} disabled={todo.description ? false: true }>
+                Create
+            </button>
         </div>
     )
 }
