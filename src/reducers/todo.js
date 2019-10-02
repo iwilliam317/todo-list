@@ -1,4 +1,6 @@
-const INITIAL_STATE = {list: JSON.parse(localStorage.getItem('list')) || []}
+import {addToLocalStorage, getFromLocalStorage} from '../utils'
+
+const INITIAL_STATE = {list: getFromLocalStorage('list') || []}
 
 const TodoReducer = (state = INITIAL_STATE, action) => {
    let list = [] 
@@ -13,7 +15,7 @@ const TodoReducer = (state = INITIAL_STATE, action) => {
             const todo = {id, description: action.payload, done: false}
             list = state.list
             list.push(todo)
-            localStorage.setItem('list', JSON.stringify(list))
+            addToLocalStorage('list', list)
             return {...state, description: ''}
 
         case 'REMOVE_TODO':
